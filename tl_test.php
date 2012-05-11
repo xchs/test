@@ -54,15 +54,15 @@ $GLOBALS['TL_DCA']['tl_rep_git_client'] = array
 	(
 		'sorting' => array
 		(
-			'mode'                  => 1,
-			'fields'                => array('repUser'),
-			'flag'                  => 1,
-			'panelLayout'           => 'search,sort,filter,limit'
+			'mode'                    => 1,
+			'fields'                  => array('repUser'),
+			'flag'                    => 1,
+			'panelLayout'             => 'search,sort,filter,limit'
 		),
 		'label' => array
 		(
-			'fields'                => array('repUser', 'repRepository'),
-			'format'                => '%s :: %s'
+			'fields'                  => array('repUser', 'repRepository'),
+			'format'                  => '%s :: %s'
 		),
 		'global_operations' => array
 		(
@@ -107,7 +107,7 @@ $GLOBALS['TL_DCA']['tl_rep_git_client'] = array
 	// Palettes
 	'palettes' => array
 	(
-		'default'                 => '{title_legend},repUser,repRepository'
+		'default'                     => '{title_legend},repUser,repRepository'
 	),
 
 	// Fields
@@ -115,10 +115,10 @@ $GLOBALS['TL_DCA']['tl_rep_git_client'] = array
 	(
 		'repUser' => array
 		(
-			'label'                 => &$GLOBALS['TL_LANG']['tl_rep_git_client']['repUser'],
-			'exclude'               => true,
-			'inputType'             => 'text',
-			'eval'                  => array('maxlength'=>255),
+			'label'                   => &$GLOBALS['TL_LANG']['tl_rep_git_client']['repUser'],
+			'exclude'                 => true,
+			'inputType'               => 'text',
+			'eval'                    => array('maxlength'=>255),
 			'save_callback' => array
 			(
 				array('tl_rep_git_client', 'importUserRepos')
@@ -126,11 +126,11 @@ $GLOBALS['TL_DCA']['tl_rep_git_client'] = array
 		),
 		'repRepository' => array
 		(
-			'label'                 => &$GLOBALS['TL_LANG']['tl_rep_git_client']['repRepository'],
-			'exclude'               => true,
-			'inputType'             => 'select',
-			'options_callback'      => array('tl_rep_git_client', 'getUserRepos'),
-			'eval'                  => array('mandatory'=>true)
+			'label'                   => &$GLOBALS['TL_LANG']['tl_rep_git_client']['repRepository'],
+			'exclude'                 => true,
+			'inputType'               => 'select',
+			'options_callback'        => array('tl_rep_git_client', 'getUserRepos'),
+			'eval'                    => array('mandatory'=>true)
 		)
 	)
 );
